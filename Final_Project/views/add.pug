@@ -1,0 +1,46 @@
+extends layout 
+
+block content
+
+    if errors
+        each error in errors 
+            p(style="color:red") #{error.msg}
+
+    h1 Add Restaurant
+    form(method="POST" action="" id="postform")
+            label Name: 
+            input(name="name" type="text")
+            br
+            br
+            label Country: 
+            input(name="country" type="text")
+            br
+            br
+            label Province/State:  
+            input(name="province" type="text")
+            br
+            br
+            label City:  
+            input(name="city" type="text")
+            br
+            br
+            label Description(optional): 
+            br
+            textarea(rows="5" cols="40" name="description" form="postform")
+            br
+            br
+            label Rating:
+            br
+            input(name="rating" id="one" type="radio" value= 1)
+            label 1 star 
+            input(name="rating" id="two" type="radio" value= 2)
+            label 2 stars 
+            input(name="rating" id="three" type="radio" value= 3)
+            label 3 stars 
+            input(name="rating" id="four" type="radio" value= 4)
+            label 4 stars 
+            input(name="rating" id="five" type="radio" value= 5)
+            label 5 stars      
+            br
+            br
+            input(type="submit" value="Submit")

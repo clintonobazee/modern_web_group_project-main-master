@@ -1,0 +1,12 @@
+extends layout
+
+block content 
+    h1 WARNING 
+    h2 This is a dangerous page please proceed with caution.
+    br
+    h2 You are about to deleted the #{restaurant.name} BetterEats Entry 
+    h2 Please be warned there is no reversing this if you are sure you wish to proceed press the DELETE button
+    br
+    br
+    form(method="POST" action="")
+        input(type="submit" value="DELETE")
